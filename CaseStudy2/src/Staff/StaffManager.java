@@ -60,6 +60,8 @@ public class StaffManager implements Serializable {
         double salary = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập địa chỉ của nhân viên: ");
         String address = scanner.nextLine();
+        System.out.println("Thêm mới Nhân viên thành công!");
+        System.out.println("------------------------------");
         return new Staff(name, age, gender, address, salary);
     }
 
@@ -145,6 +147,8 @@ public class StaffManager implements Serializable {
         staff.setAddress(address);
         updateStaff(staff);
         ghiFile(staffList);
+        System.out.println("Cập nhật thành công!");
+        System.out.println("--------------------");
     }
 
     public void deleteStaffById(Scanner scanner) {
@@ -156,6 +160,8 @@ public class StaffManager implements Serializable {
                 staffList.remove(i);
                 ghiFile(staffList);
                 check = true;
+                System.out.println("Xóa thành công!");
+                System.out.println("---------------");
             }
         }
         if (check == false) {

@@ -11,6 +11,7 @@ public class MenuStaff {
     StaffManager staffManager = new StaffManager();
     public ArrayList<Staff> arrayList = staffManager.docFile();
     public  void MenuStaff() {
+        MenuAccount menuAccount = new MenuAccount();
         int choice = -1;
         do {
             try {
@@ -34,12 +35,15 @@ public class MenuStaff {
                     case 3:
                         staffManager.displayStaffByName(scanner);
                         break;
+                    case 0:
+                        menuAccount.Connection();
+                        break;
                 }
             }catch (NumberFormatException e){
                 System.err.println("Nhập vào không đúng định dạng, vui lòng nhập lại");
             }
         }
-        while (choice != 0);
+        while (true);
         }
     public void Menu() {
         int choice = -1;

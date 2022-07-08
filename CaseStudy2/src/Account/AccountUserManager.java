@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AccountUserManager implements Serializable {
-//    public  Scanner scanner = new Scanner(System.in);
     public ArrayList<AccountUser> accountUsers = new ArrayList<>();
     public void ghiFile(ArrayList<AccountUser> accountUsers) {
         File file = new File("Account.txt");
@@ -72,7 +71,7 @@ public class AccountUserManager implements Serializable {
     }
 
     public boolean checkAccountAdmin(AccountAdmin accountAdmin) {
-        if (accountAdmin.getAdminAcc().equals("ADMIN") && accountAdmin.getAdminPass().equals("12345")) {
+        if (accountAdmin.getAdminAcc().equals("ADMIN") && accountAdmin.getAdminPass().equals("910JQK")) {
             return true;
         } else {
             return false;
@@ -80,7 +79,7 @@ public class AccountUserManager implements Serializable {
     }
 
     public void loginAccount(Scanner scanner) {
-        AccountAdmin accountAdmin = new AccountAdmin("ADMIN", "12345");
+        AccountAdmin accountAdmin = new AccountAdmin("ADMIN", "910JQK");
        MenuStaff menuStaff = new MenuStaff();
         System.out.println("Tên đăng nhập: ");
         String userAccount = scanner.nextLine();
